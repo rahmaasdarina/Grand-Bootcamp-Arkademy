@@ -1,0 +1,5 @@
+//Rahma Asdarina B
+//Query No. 6
+
+
+SELECT product_categories.id, product_categories.name, GROUP_CONCAT(products.name SEPARATOR ',') as products from product_categories INNER JOIN products ON product_categories.id = products.category_id Group By id;

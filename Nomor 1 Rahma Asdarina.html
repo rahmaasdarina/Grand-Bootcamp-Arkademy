@@ -1,0 +1,44 @@
+<html>
+<title> Nomor 1 Rahma Asdarina </title>
+<style>
+li.a {list-style-type:circle;}
+li.b {list-style-type:square;}
+li.c {list-style-type:disc;}
+</style>
+	<body>
+	<script type = "text/javascript">
+
+var json_data = 
+{
+	"ItemId" : "12341822",
+	"ItemName" : "FGX FlannelShirt",
+	"Price" : 195000,
+	"AvailableColorandSize" : [
+		{
+			"Color" : "blue-black",
+			"Size" : ["M", "L", "XL"]
+		},
+		{
+			"Color" : "black-white",
+			"Size" : "L"
+		}
+	],
+	"freeShipping" : false
+};
+//obj = JSON.parse(json_data);
+console.log(json_data);
+//console.log(json_data.ItemId);
+
+document.write("Item Id = " + json_data.ItemId + "<br />" + "Item Name = " + json_data.ItemName + "<br />" + "Item Price = " + json_data.Price + "<br />");
+document.write("Available Color and Size = " + "<br />");
+//document.write("<ol>")
+	for(var i=0; i<json_data.AvailableColorandSize.length; i++){
+	document.write("<li class='c'> Color = " + json_data.AvailableColorandSize[i].Color + "</li>" + "<li class='a'> Size = " + "<li class='b'> " + json_data.AvailableColorandSize[i].Size + "</li>");
+	}
+
+//	document.write("</ol>")
+document.write("Free Shipping = " + json_data.freeShipping + "<br />");
+</script>
+</body>
+</html>
+	
